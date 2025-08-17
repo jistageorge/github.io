@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Analytics Test Page</title>
+  <meta name="description" content="Minimal GitHub Pages site to test GA4.">
+  <!-- GA4 tag: replace G-XXXXXXX with your Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;margin:0;padding:2rem;line-height:1.5}
+    .wrap{max-width:760px;margin:auto}
+    h1{margin-top:0}
+    a.button{display:inline-block;padding:.6rem 1rem;border:1px solid #333;border-radius:10px;text-decoration:none;margin-right:.5rem}
+    code{background:#f4f4f4;padding:.15rem .35rem;border-radius:6px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>GA4 Analytics Test</h1>
+    <p>This page is hosted on GitHub Pages. After you replace <code>G-XXXXXXX</code> with your GA4 Measurement ID and publish, open GA4 &rarr; <strong>Reports &gt; Realtime</strong> to see your visit.</p>
+    <p>
+      <a class="button" href="mailto:you@example.com">Contact (mailto link)</a>
+      <a class="button" href="#cta" onclick="gtag('event','test_click',{label:'cta-button'})">Custom Event Button</a>
+    </p>
+    <p id="cta">Click the buttons and then check GA4 Realtime &amp; DebugView.</p>
+    <hr>
+    <h2>What to do next</h2>
+    <ol>
+      <li>Replace <code>G-XXXXXXX</code> (twice) with your GA4 Measurement ID.</li>
+      <li>Commit and push to your repo (root): <code>yourusername.github.io</code>.</li>
+      <li>Check GA4 Realtime to see yourself as an active user.</li>
+      <li>(Optional) In GA4 Admin &rarr; Events, mark <code>test_click</code> as a Conversion.</li>
+    </ol>
+  </div>
+</body>
+</html>
